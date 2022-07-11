@@ -1,13 +1,18 @@
 import './App.css';
-import { useState } from 'react';
+
+import JSXMapTable from './jsx-map-table/JSXMapTable';
+// import Counter from './ex-0711-3/Counter';
+// import JSXdemo from './ex0711-1/JSXdemo';
+import MapDemo from './ex0711-2/MapDemo';
+import State from './ex0711-state/State';
+import ObjArrHandle from './ex0711-objArrHandle/ObjArrHandle';
 
 function App() {
-    const [total, setTotal] = useState(0);
-
     return (
-        <div className="App">
-            <h1 onClick={() => setTotal(total + 1)}>{total}</h1>
-        </div>
+        <>
+            {/* <MapDemo /> */}
+            <ObjArrHandle />
+        </>
     );
 }
 
