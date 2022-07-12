@@ -5,27 +5,40 @@ import data from './data/student.json';
 function MapDemo() {
     const [student, setStudent] = useState(data);
     // const student = data;
+
     const [sortMethod, setSortMethod] = useState('');
 
     function sorting(event) {
-        setSortMethod(event.target.value);
-    }
-
-    useEffect(() => {
-        if (sortMethod === 'ASC') {
-            setStudent((pre) => {
-                return [...pre].sort((a, b) => {
-                    return a.id - b.id;
-                });
+        const newArr = [...student];
+        // console.log(student);
+        if (event.target.value === 'DESC') {
+            newArr.sort((a, b) => {
+                return b.id - a.id;
             });
-        } else if (sortMethod === 'DESC') {
-            setStudent((pre) => {
-                return [...pre].sort((a, b) => {
-                    return b.id - a.id;
-                });
+        } else if (event.target.value === 'ASC') {
+            newArr.sort((a, b) => {
+                return a.id - b.id;
             });
         }
-    }, [sortMethod]);
+        setStudent(newArr);
+        // setSortMethod(event.target.value);
+    }
+
+    // useEffect(() => {
+    //     if (sortMethod === 'ASC') {
+    //         setStudent((pre) => {
+    //             return [...pre].sort((a, b) => {
+    //                 return a.id - b.id;
+    //             });
+    //         });
+    //     } else if (sortMethod === 'DESC') {
+    //         setStudent((pre) => {
+    //             return [...pre].sort((a, b) => {
+    //                 return b.id - a.id;
+    //             });
+    //         });
+    //     }
+    // }, [sortMethod]);
 
     return (
         <>
