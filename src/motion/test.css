@@ -1,0 +1,29 @@
+.mr-auto{
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.drag-wrap{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0);
+ 
+}
+
+
+
+
+
+
+.d-flex{
+    display: flex;
+}
+
+.d-justify-contents{
+    justify-content: center;
+}
+
+.d-align-items{
+    align-items: center;
+}
