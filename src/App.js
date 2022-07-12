@@ -8,12 +8,13 @@ import './App.css';
 // import State from './ex0711-state/State';
 // import ObjArrHandle from './ex0711-objArrHandle/ObjArrHandle';
 // import Parent from './ex0712-1/Parent';
-import Parent2 from './ex0712-2/Parent2';
+// import Parent2 from './ex0712-2/Parent2';
+import Test from './motion/Test';
 
 function App() {
     return (
         <>
-            <Parent2 />
+            <Test />
         </>
     );
 }
