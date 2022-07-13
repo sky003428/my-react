@@ -1,4 +1,5 @@
 import './App.css';
+import OrderPage from './ex0713-1/OrderPage';
 // import MapDemo from './ex0711-2/MapDemo';
 
 // import JSXMapTable from './jsx-map-table/JSXMapTable';
@@ -9,12 +10,11 @@ import './App.css';
 // import ObjArrHandle from './ex0711-objArrHandle/ObjArrHandle';
 // import Parent from './ex0712-1/Parent';
 // import Parent2 from './ex0712-2/Parent2';
-import Test from './motion/Test';
 
 function App() {
     return (
         <>
-            <Test />
+            <OrderPage />
         </>
     );
 }
