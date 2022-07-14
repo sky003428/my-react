@@ -6,9 +6,11 @@ function Control0714() {
     const [textAreaV, setTextAreaV] = useState('');
     const [gender, setGender] = useState('');
     const [car, setCar] = useState('');
+    const [food, setFood] = useState([]);
 
     const genderOption = ['Male', 'Female', 'Secret'];
     const carOption = ['Audi', 'Benz', 'Toyota'];
+    const foodOption = ['香蕉', '西瓜', '芭樂'];
 
     const [optionV, setOptionV] = useState({ value: '', label: '' });
     const options = [
@@ -82,6 +84,36 @@ function Control0714() {
             <Select options={options} onChange={setOptionV} />
             <h4>我的選擇:{JSON.stringify(optionV)}</h4>
             <h4>我的選擇:{optionV.value}</h4>
+
+            <br />
+            <div>
+                <h4>Checkbox(複選)</h4>
+                {foodOption.map((v, i) => {
+                    return (
+                        <div key={i}>
+                            <input
+                                type="checkbox"
+                                value={v}
+                                // checked={.includes(v)}
+                                onChange={(e) => {
+                                    if (food.includes(e.target.value)) {
+                                        setFood((pre) => {
+                                            return pre.filter((val) => {
+                                                return val !== e.target.value;
+                                            });
+                                        });
+                                    } else {
+                                        const newArr = [...food];
+                                        newArr.push(e.target.value);
+                                        setFood(newArr);
+                                    }
+                                }}
+                            />
+                            <label>{v}</label>
+                        </div>
+                    );
+                })}
+            </div>
         </>
     );
 }

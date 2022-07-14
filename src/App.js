@@ -1,7 +1,7 @@
 import './App.css';
 
 
-import Under18 from './ex0714-2/Under18';
+import Control0714 from './ex0714-1/Control0714';
 // import MapDemo from './ex0711-2/MapDemo';
 
 // import JSXMapTable from './jsx-map-table/JSXMapTable';
@@ -16,7 +16,7 @@ import Under18 from './ex0714-2/Under18';
 function App() {
     return (
         <>
-            <Under18 />
+            <Control0714 />
         </>
     );
 }
