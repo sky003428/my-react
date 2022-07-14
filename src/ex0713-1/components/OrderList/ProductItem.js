@@ -8,7 +8,16 @@ function ProductItem(props) {
     //   price:300
     // }
 
-    const { id, name, category, image, price, count, setCount } = props;
+    const {
+        id,
+        name,
+        category,
+        image,
+        price,
+        count,
+        setProductsInOrder,
+        setProductArr,
+    } = props;
 
     return (
         <>
@@ -25,7 +34,7 @@ function ProductItem(props) {
                         <a
                             href="#/"
                             onClick={() => {
-                                setCount(count - 1);
+                                setProductsInOrder(count - 1);
                             }}
                         >
                             -
@@ -36,14 +45,29 @@ function ProductItem(props) {
                         <a
                             href="#/"
                             onClick={() => {
-                                setCount(count + 1);
+                                setProductsInOrder(count + 1);
                             }}
                         >
                             +
                         </a>
                     </div>
                     <div className="col">
-                        ${price} <span className="close">&#10005;</span>
+                        ${price}{' '}
+                        <span
+                            className="close"
+                            onClick={() => {
+                                setProductArr((pre) => {
+                                    const tempArr = pre.map((v) => {
+                                        return { ...v };
+                                    });
+                                    return tempArr.filter((v) => {
+                                        return v.id !== id;
+                                    });
+                                });
+                            }}
+                        >
+                            &#10005;
+                        </span>
                     </div>
                 </div>
             </div>

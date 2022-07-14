@@ -13,4 +13,18 @@ export const products = [
         image: 'https://i.imgur.com/1GrakTl.jpg',
         price: 450,
     },
+    {
+        id: 3,
+        name: '白色 T-shirt',
+        category: 'Shirt',
+        image: 'https://i.imgur.com/1GrakTl.jpg',
+        price: 50,
+    },
+    {
+        id: 4,
+        name: '白色 T-shirt',
+        category: 'Shirt',
+        image: 'https://i.imgur.com/1GrakTl.jpg',
+        price: 100,
+    },
 ];

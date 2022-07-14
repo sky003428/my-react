@@ -1,5 +1,7 @@
 import './App.css';
-import OrderPage from './ex0713-1/OrderPage';
+
+
+import Under18 from './ex0714-2/Under18';
 // import MapDemo from './ex0711-2/MapDemo';
 
 // import JSXMapTable from './jsx-map-table/JSXMapTable';
@@ -14,7 +16,7 @@ import OrderPage from './ex0713-1/OrderPage';
 function App() {
     return (
         <>
-            <OrderPage />
+            <Under18 />
         </>
     );
 }

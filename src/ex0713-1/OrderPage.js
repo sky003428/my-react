@@ -6,14 +6,21 @@ import { useState } from 'react';
 
 import { products } from './data/products';
 
+const initalState = (arr) =>
+    arr.map((v) => {
+        return { ...v, count: 1 };
+    });
+
 function OrderPage() {
-    const [counts, setCounts] = useState([1, 1]);
+    const [productsInOrder, setProductsInOrder] = useState(
+        initalState(products)
+    );
 
     const calcTotalNumber = () => {
         let total = 0;
 
-        for (let i = 0; i < products.length; i++) {
-            total += counts[i];
+        for (let i = 0; i < productsInOrder.length; i++) {
+            total += productsInOrder[i].count;
         }
 
         return total;
@@ -22,8 +29,8 @@ function OrderPage() {
     const calcTotalPrice = () => {
         let total = 0;
 
-        for (let i = 0; i < products.length; i++) {
-            total += counts[i] * products[i].price;
+        for (let i = 0; i < productsInOrder.length; i++) {
+            total += productsInOrder[i].count * productsInOrder[i].price;
         }
 
         return total;
@@ -32,7 +39,10 @@ function OrderPage() {
     return (
         <div className="card">
             <div className="row">
-                <OrderList counts={counts} setCounts={setCounts} />
+                <OrderList
+                    productsInOrder={productsInOrder}
+                    setProductsInOrder={setProductsInOrder}
+                />
                 <Summary
                     totalNumber={calcTotalNumber()}
                     totalPrice={calcTotalPrice()}
