@@ -1,22 +1,12 @@
 import './App.css';
-
-
-import Under18 from './ex0714-2/Under18';
-// import MapDemo from './ex0711-2/MapDemo';
-
-// import JSXMapTable from './jsx-map-table/JSXMapTable';
-// import Counter from './ex-0711-3/Counter';
-// import JSXdemo from './ex0711-1/JSXdemo';
-
-// import State from './ex0711-state/State';
-// import ObjArrHandle from './ex0711-objArrHandle/ObjArrHandle';
-// import Parent from './ex0712-1/Parent';
-// import Parent2 from './ex0712-2/Parent2';
+import Control0714 from './ex0714-1/Control0714';
+import MultipleInput from './ex0715-3/MultipleInput';
 
 function App() {
     return (
         <>
-            <Under18 />
+            {/* <MultipleInput /> */}
+            <Control0714 />
         </>
     );
 }
