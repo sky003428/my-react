@@ -1,13 +1,11 @@
 import './App.css';
-import FC from './ex0718-1/FC';
-import CC from './ex0718-1/CC';
+import Parent from './ex0718-1/Parent';
+import Users from './ex0718-2/Users';
 
 function App() {
     return (
         <>
-            <FC style={{ color: 'red' }}>hihi</FC>
-
-            <CC />
+            <Users />
         </>
     );
 }
