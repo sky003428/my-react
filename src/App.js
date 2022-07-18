@@ -1,10 +1,13 @@
 import './App.css';
-import RefsForm from './ex0715-5/RefsForm';
+import FC from './ex0718-1/FC';
+import CC from './ex0718-1/CC';
 
 function App() {
     return (
         <>
-            <RefsForm />
+            <FC style={{ color: 'red' }}>hihi</FC>
+
+            <CC />
         </>
     );
 }

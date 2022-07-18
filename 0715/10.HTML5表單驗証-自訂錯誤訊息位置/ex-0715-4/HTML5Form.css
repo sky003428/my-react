@@ -1,9 +1,0 @@
-/* 校验失败的元素样式 */
-input:invalid{
-    border-color: #900;
-    background-color: #FDD;
-}
-  
-input:focus:invalid {
-    outline: none;
-}
