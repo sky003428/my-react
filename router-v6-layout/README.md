@@ -1,0 +1,3 @@
+- layout1: 基本的巢狀路由範例
+- layout2: 商品列表 -> 商品詳細頁，使用params的巢狀路由範例
+- layout-ordersteps: 購物流程4步驟範例，用state控制為主，與router較無關

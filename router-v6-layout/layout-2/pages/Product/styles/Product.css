@@ -1,0 +1,49 @@
+.product {
+  min-height: 90vh;
+  background-color: #d2d6d8;
+  color: rgb(9, 9, 9);
+  padding: 10px;
+}
+
+/* List card css use */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em 0;
+  text-align: left;
+}
+
+.card {
+  width: 30%;
+  display: flex;
+  background: #eee;
+  padding: .6em 1em .6em .6em;
+  margin-bottom: 1em;
+  border: solid 1px #ccc;
+}
+
+.img {
+  max-width: 300px;
+  min-width: 80px;
+  height: 80px;
+  margin: 0 .6em 0 0;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.content p {
+  margin: 0;
+  font-size: .7em;
+  color: #222;
+}
+
+/* Detail use */
+
+.detail-img {
+  max-width: 400px;
+  margin: 0 .6em 0 0;
+}

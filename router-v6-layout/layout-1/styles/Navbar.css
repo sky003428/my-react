@@ -1,0 +1,13 @@
+.navbar{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}

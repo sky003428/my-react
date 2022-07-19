@@ -28,7 +28,7 @@ function Users() {
         getData();
         setTimeout(() => {
             setIsLoading();
-        }, 2000);
+        }, 1000);
     }, []);
 
     const loading = (
@@ -57,13 +57,12 @@ function Users() {
         </>
     );
 
-    function search() {
-        if (searchWords) {
-            setUsers((pre) => pre.filter((v) => v.name.includes(searchWords)));
-        } else {
-            setUsers(rawData);
+    function search(val) {
+        setUsers(rawData);
+        if (val) {
+            setUsers((pre) => pre.filter((v) => v.name.includes(val)));
         }
-        console.log(searchWords);
+        console.log(val);
     }
 
     return (
@@ -74,9 +73,11 @@ function Users() {
                 value={searchWords}
                 onChange={(e) => {
                     setSearchWords(e.target.value);
+
+                    search(e.target.value);
                 }}
             />
-            <button onClick={search}>搜尋</button>
+            <button onClick={() => search(searchWords)}>搜尋</button>
             {isLoading ? loading : table}
         </Fragment>
     );
